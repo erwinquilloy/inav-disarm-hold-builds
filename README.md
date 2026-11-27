@@ -11,6 +11,8 @@ at once and every other MSP user sees the real state. Default 0 = off.
 - `prepare.sh`: applies it to the official source
 - `.github/workflows/build.yml`: builds every release target and creates draft releases
 
+The 9.x builds are released on [erwinquilloy/inav](https://github.com/erwinquilloy/inav/releases); 10.0 and later here.
+
 Reproduce: check out the INAV tag, run `prepare.sh <checkout> <version>`, then build INAV as usual.
 
 License: GPL-3.0, like INAV (see `COPYING`).

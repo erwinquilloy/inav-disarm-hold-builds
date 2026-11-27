@@ -6,7 +6,7 @@ name: Disarm hold builds
 #   9.0.0 a7932b92eadd92ba7851a009a5c974b9cc24835d
 on:
   push:
-    branches: [disarm-hold-builds]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -101,7 +101,7 @@ jobs:
             echo "**UNOFFICIAL.** INAV $VERSION with one addition: \`osd_msp_disarm_hold\` (0-7 s, default 0 = off). Not made or supported by the INAV team. Test with props off first."
             case "$VERSION" in *-rc*) echo; echo "INAV $VERSION is a release candidate, not a final INAV release.";; esac
             echo
-            echo "Source: official INAV $VERSION plus \`disarm_hold_${VERSION}.patch\` (attached). Build recipe: branch \`disarm-hold-builds\`, commit $GITHUB_SHA. License: GPL-3.0."
+            echo "Source: official INAV $VERSION plus \`disarm_hold_${VERSION}.patch\` (attached). Build recipe: $GITHUB_REPOSITORY, commit $GITHUB_SHA. License: GPL-3.0."
             if [ -s missing.txt ]; then
               echo
               echo "Not available with the hold in this version:"
